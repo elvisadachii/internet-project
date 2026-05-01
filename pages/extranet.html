@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extranet — Internet Terminology</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav id="sidebar"></nav>
+  <main>
+    <div class="hero">
+      <div class="term-number">Term 09 of 16</div>
+      <h1>Extranet</h1>
+      <p class="tagline">A controlled private network that extends intranet access to authorised external parties — suppliers, partners, or customers.</p>
+    </div>
+    <article>
+      <h2>Definition</h2>
+      <p>An <strong>extranet</strong> is a controlled private network that allows access to an organisation's internal intranet by authorised external users, such as business partners, suppliers, vendors, contractors, or customers. It serves as a bridge between a private intranet and the public Internet, providing selective external access to specific internal resources.</p>
+      <p>An extranet uses the same Internet protocols (TCP/IP, HTTP) as the Internet and intranet, but employs authentication, authorisation, and encryption to control access and secure data transmission — typically through VPNs (Virtual Private Networks) or secure login portals.</p>
+
+      <figure class="img-block">
+        <img src="../images/extranet.svg" alt="Diagram showing extranet connecting a company with external partners" />
+        <figcaption>An extranet connects an organisation's internal systems to authorised external partners through a secure gateway.</figcaption>
+      </figure>
+
+      <h2>How an Extranet Works</h2>
+      <p>An extranet typically involves three components:</p>
+      <ol>
+        <li><strong>The Host Intranet</strong> — The organisation's internal private network containing resources to be shared.</li>
+        <li><strong>The Secure Gateway</strong> — A firewall, VPN, or secure web portal that controls and authenticates external access.</li>
+        <li><strong>Authorised External Users</strong> — Partners, suppliers, or customers granted specific, limited access credentials.</li>
+      </ol>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">Access Level</div>
+          <div class="card-value">Selected external parties</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Security</div>
+          <div class="card-value">VPN, SSL/TLS, login authentication</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Protocols</div>
+          <div class="card-value">TCP/IP, HTTPS, VPN tunnels</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Common Uses</div>
+          <div class="card-value">B2B portals, supply chain</div>
+        </div>
+      </div>
+
+      <h2>Common Uses of Extranets</h2>
+      <ul>
+        <li><strong>Supply Chain Management</strong> — Allows suppliers to check inventory levels, submit invoices, and track orders.</li>
+        <li><strong>Customer Portals</strong> — Gives customers access to their account information, order history, and support.</li>
+        <li><strong>Partner Collaboration</strong> — Enables joint project teams across organisations to share documents and progress.</li>
+        <li><strong>Healthcare Networks</strong> — Connects hospitals, clinics, and insurance providers for secure patient data exchange.</li>
+        <li><strong>Financial Services</strong> — Banks share account information with third-party financial applications.</li>
+      </ul>
+
+      <div class="highlight">
+        Extranets became prominent in the late 1990s as businesses recognised the value of extending their internal systems to partners without exposing the entire intranet to the public Internet.
+      </div>
+
+      <h2>Advantages &amp; Disadvantages</h2>
+      <p><strong>Advantages:</strong> Streamlines B2B communication, reduces operational costs, improves collaboration, enables real-time data sharing with partners, and enhances customer service through self-service portals.</p>
+      <p><strong>Disadvantages:</strong> Higher setup and maintenance costs than an intranet alone, increased security attack surface, requires careful access management to prevent over-sharing of sensitive data, and dependence on Internet connectivity for external access.</p>
+    </article>
+    <div class="page-nav">
+      <a href="../index.html">← All Terms</a>
+      <a href="intranet.html">← Intranet</a>
+      <a href="multitier.html">Next: Multitier Architecture →</a>
+      <a href="intranet.html">Intranet</a>
+      <a href="www.html">World Wide Web</a>
+    </div>
+  </main>
+  <script src="../nav.js"></script>
+  <script>buildNav('extranet');</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Browsers — Internet Terminology</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav id="sidebar"></nav>
+  <main>
+    <div class="hero">
+      <div class="term-number">Term 03 of 16</div>
+      <h1>Web Browsers</h1>
+      <p class="tagline">Software applications that retrieve, interpret, and display web content — the primary interface between users and the World Wide Web.</p>
+    </div>
+    <article>
+      <h2>Definition</h2>
+      <p>A <strong>web browser</strong> is a software application designed to access information on the World Wide Web. It acts as a client that sends HTTP requests to web servers, receives responses containing HTML, CSS, JavaScript, and other resources, and renders them as visual web pages on the user's screen.</p>
+      <p>Modern browsers are sophisticated platforms capable of running complex web applications, managing security certificates, storing cookies, and executing JavaScript code — effectively making them operating-system-like environments for web-based software.</p>
+
+      <figure class="img-block">
+        <img src="../images/browsers.svg" alt="Popular web browser logos displayed on a screen" />
+        <figcaption>Major web browsers including Chrome, Firefox, Safari, Edge, and Opera compete for users worldwide.</figcaption>
+      </figure>
+
+      <h2>How a Browser Works</h2>
+      <p>When you enter a URL, the browser follows these steps:</p>
+      <ol>
+        <li><strong>DNS Lookup</strong> — Resolves the domain name to an IP address.</li>
+        <li><strong>TCP Connection</strong> — Establishes a connection with the web server.</li>
+        <li><strong>HTTP Request</strong> — Sends a GET request for the page resource.</li>
+        <li><strong>Response Processing</strong> — Receives HTML, CSS, and JavaScript files.</li>
+        <li><strong>Rendering</strong> — Builds the Document Object Model (DOM) and paints pixels on screen.</li>
+      </ol>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">First Browser</div>
+          <div class="card-value">WorldWideWeb (1990)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">First Graphical</div>
+          <div class="card-value">NCSA Mosaic (1993)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Market Leader</div>
+          <div class="card-value">Google Chrome (~65%)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Core Engine Types</div>
+          <div class="card-value">Blink, Gecko, WebKit</div>
+        </div>
+      </div>
+
+      <h2>Key Browser Components</h2>
+      <ul>
+        <li><strong>User Interface</strong> — Address bar, navigation buttons, bookmarks, tabs.</li>
+        <li><strong>Browser Engine</strong> — Marshals actions between the UI and rendering engine.</li>
+        <li><strong>Rendering Engine</strong> — Parses HTML and CSS, and lays out content (e.g., Blink in Chrome, Gecko in Firefox).</li>
+        <li><strong>JavaScript Engine</strong> — Executes JavaScript code (e.g., V8 in Chrome, SpiderMonkey in Firefox).</li>
+        <li><strong>Networking</strong> — Handles HTTP/HTTPS requests, caching, and cookies.</li>
+        <li><strong>Data Storage</strong> — Manages cookies, localStorage, sessionStorage, and IndexedDB.</li>
+      </ul>
+
+      <div class="highlight">
+        The "Browser Wars" of the 1990s between Netscape Navigator and Internet Explorer shaped the standards-based web we use today.
+      </div>
+
+      <h2>Popular Browsers Today</h2>
+      <p><strong>Google Chrome</strong> dominates with its fast V8 JavaScript engine and integration with Google services. <strong>Mozilla Firefox</strong> prioritises privacy and open standards. <strong>Apple Safari</strong> is optimised for macOS and iOS. <strong>Microsoft Edge</strong> (rebuilt on Chromium) replaced Internet Explorer in 2020. <strong>Opera</strong> and <strong>Brave</strong> offer additional privacy and feature sets.</p>
+    </article>
+    <div class="page-nav">
+      <a href="../index.html">← All Terms</a>
+      <a href="tcp-ip.html">← TCP/IP</a>
+      <a href="web-servers.html">Next: Web Servers →</a>
+      <a href="http.html">HTTP</a>
+      <a href="url.html">URLs</a>
+    </div>
+  </main>
+  <script src="../nav.js"></script>
+  <script>buildNav('web-browsers');</script>
+</body>
+</html>
