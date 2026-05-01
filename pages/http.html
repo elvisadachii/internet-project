@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTTP — Internet Terminology</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav id="sidebar"></nav>
+  <main>
+    <div class="hero">
+      <div class="term-number">Term 07 of 16</div>
+      <h1>Hypertext Transfer Protocol</h1>
+      <p class="tagline">The application-layer protocol that governs how web browsers and servers communicate — the backbone of data exchange on the World Wide Web.</p>
+    </div>
+    <article>
+      <h2>Definition</h2>
+      <p><strong>Hypertext Transfer Protocol (HTTP)</strong> is an application-layer protocol used for transmitting hypermedia documents, such as HTML. It defines the rules and format by which messages are sent and received between web browsers (clients) and web servers. HTTP is the foundation of data communication on the World Wide Web.</p>
+      <p>HTTP follows a <strong>request–response model</strong>: the client sends a request to the server, and the server returns a response. It is a <em>stateless</em> protocol, meaning each request is independent — the server does not retain information about previous requests by default (cookies and sessions address this limitation).</p>
+
+      <figure class="img-block">
+        <img src="../images/http.svg" alt="HTTP request and response cycle diagram" />
+        <figcaption>The HTTP request–response cycle between a client (browser) and a web server.</figcaption>
+      </figure>
+
+      <h2>HTTP Methods</h2>
+      <p>HTTP defines a set of <em>request methods</em> (verbs) indicating the desired action:</p>
+      <ul>
+        <li><strong>GET</strong> — Retrieves data from the server (e.g., loading a web page). Should not change server state.</li>
+        <li><strong>POST</strong> — Submits data to the server (e.g., form submissions, creating resources).</li>
+        <li><strong>PUT</strong> — Updates an existing resource entirely.</li>
+        <li><strong>PATCH</strong> — Partially updates a resource.</li>
+        <li><strong>DELETE</strong> — Removes a specified resource.</li>
+        <li><strong>HEAD</strong> — Same as GET but returns only headers, not body.</li>
+        <li><strong>OPTIONS</strong> — Describes communication options for the target resource.</li>
+      </ul>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">Created by</div>
+          <div class="card-value">Tim Berners-Lee, 1989</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Default Port</div>
+          <div class="card-value">80 (HTTP) / 443 (HTTPS)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Latest Version</div>
+          <div class="card-value">HTTP/3 (2022)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Transport</div>
+          <div class="card-value">TCP (HTTP/1, 2) / QUIC (HTTP/3)</div>
+        </div>
+      </div>
+
+      <h2>HTTP Status Codes</h2>
+      <p>Every HTTP response includes a three-digit status code indicating the outcome:</p>
+      <ul>
+        <li><strong>1xx Informational</strong> — Request received, processing continues.</li>
+        <li><strong>2xx Success</strong> — 200 OK (request succeeded), 201 Created.</li>
+        <li><strong>3xx Redirection</strong> — 301 Moved Permanently, 302 Found.</li>
+        <li><strong>4xx Client Error</strong> — 400 Bad Request, 403 Forbidden, 404 Not Found.</li>
+        <li><strong>5xx Server Error</strong> — 500 Internal Server Error, 503 Service Unavailable.</li>
+      </ul>
+
+      <h2>HTTPS — Secure HTTP</h2>
+      <p><strong>HTTPS</strong> (HTTP Secure) adds a layer of encryption using <strong>TLS (Transport Layer Security)</strong>. This encrypts the data exchanged between the browser and server, protecting against eavesdropping and man-in-the-middle attacks. HTTPS is now standard for all websites, especially those handling sensitive information.</p>
+
+      <div class="highlight">
+        HTTP/2 (2015) introduced multiplexing, allowing multiple requests over a single connection. HTTP/3 (2022) runs on QUIC (over UDP) for even lower latency.
+      </div>
+
+      <h2>HTTP Versions</h2>
+      <p><strong>HTTP/1.0</strong> opened a new connection for every request. <strong>HTTP/1.1</strong> introduced persistent connections and chunked transfers. <strong>HTTP/2</strong> enabled multiplexing and header compression. <strong>HTTP/3</strong> uses the QUIC protocol over UDP for dramatically reduced latency, especially on mobile networks.</p>
+    </article>
+    <div class="page-nav">
+      <a href="../index.html">← All Terms</a>
+      <a href="dns.html">← DNS</a>
+      <a href="intranet.html">Next: Intranet →</a>
+      <a href="tcp-ip.html">TCP/IP</a>
+      <a href="url.html">URLs</a>
+    </div>
+  </main>
+  <script src="../nav.js"></script>
+  <script>buildNav('http');</script>
+</body>
+</html>
