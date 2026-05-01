@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DNS — Internet Terminology</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav id="sidebar"></nav>
+  <main>
+    <div class="hero">
+      <div class="term-number">Term 06 of 16</div>
+      <h1>Domain Name System</h1>
+      <p class="tagline">The Internet's distributed directory service that translates human-readable domain names into machine-readable IP addresses.</p>
+    </div>
+    <article>
+      <h2>Definition</h2>
+      <p>The <strong>Domain Name System (DNS)</strong> is a hierarchical, decentralised naming system for computers, services, and other resources connected to the Internet or a private network. Often described as "the phonebook of the Internet," DNS translates memorable domain names (like <em>google.com</em>) into numerical IP addresses (like <em>142.250.80.46</em>) that computers use to locate each other.</p>
+      <p>Without DNS, users would have to memorise complex numerical IP addresses to visit websites. DNS makes the Internet user-friendly and navigable.</p>
+
+      <figure class="img-block">
+        <img src="../images/dns.svg" alt="DNS resolution process diagram showing query flow" />
+        <figcaption>The DNS resolution process routes queries through a hierarchy of servers to return the correct IP address.</figcaption>
+      </figure>
+
+      <h2>The DNS Resolution Process</h2>
+      <ol>
+        <li><strong>Browser Cache Check</strong> — The browser first checks its own cached DNS records.</li>
+        <li><strong>OS Cache Check</strong> — If not cached, the operating system checks its local DNS cache and the hosts file.</li>
+        <li><strong>Recursive Resolver</strong> — The query goes to the ISP's DNS resolver (a recursive resolver), which handles the query on behalf of the client.</li>
+        <li><strong>Root Name Server</strong> — If the resolver lacks the answer, it queries one of 13 root name server clusters worldwide.</li>
+        <li><strong>TLD Name Server</strong> — The root server directs the resolver to the appropriate TLD server (e.g., the <code>.com</code> server).</li>
+        <li><strong>Authoritative Name Server</strong> — The TLD server points to the domain's own authoritative server, which returns the actual IP address.</li>
+        <li><strong>Response</strong> — The IP address is returned to the browser, cached, and used to initiate a connection.</li>
+      </ol>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">Invented by</div>
+          <div class="card-value">Paul Mockapetris, 1983</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Default Port</div>
+          <div class="card-value">53 (UDP and TCP)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Root Servers</div>
+          <div class="card-value">13 logical clusters (A–M)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Typical TTL</div>
+          <div class="card-value">300–86,400 seconds</div>
+        </div>
+      </div>
+
+      <h2>DNS Record Types</h2>
+      <ul>
+        <li><strong>A Record</strong> — Maps a domain to an IPv4 address.</li>
+        <li><strong>AAAA Record</strong> — Maps a domain to an IPv6 address.</li>
+        <li><strong>CNAME Record</strong> — Aliases one domain name to another (e.g., www → bare domain).</li>
+        <li><strong>MX Record</strong> — Specifies the mail servers for the domain.</li>
+        <li><strong>TXT Record</strong> — Stores text information, often used for verification and spam prevention (SPF, DKIM).</li>
+        <li><strong>NS Record</strong> — Indicates which name servers are authoritative for the domain.</li>
+      </ul>
+
+      <div class="highlight">
+        The entire DNS system resolves billions of queries per day in milliseconds, forming one of the Internet's most critical infrastructure components.
+      </div>
+
+      <h2>DNS Security</h2>
+      <p><strong>DNSSEC</strong> (DNS Security Extensions) adds cryptographic signatures to DNS records to protect against DNS spoofing and cache poisoning attacks. <strong>DNS over HTTPS (DoH)</strong> and <strong>DNS over TLS (DoT)</strong> encrypt DNS queries to prevent eavesdropping, improving user privacy.</p>
+    </article>
+    <div class="page-nav">
+      <a href="../index.html">← All Terms</a>
+      <a href="url.html">← URLs</a>
+      <a href="http.html">Next: HTTP →</a>
+      <a href="tcp-ip.html">TCP/IP</a>
+      <a href="web-servers.html">Web Servers</a>
+    </div>
+  </main>
+  <script src="../nav.js"></script>
+  <script>buildNav('dns');</script>
+</body>
+</html>
