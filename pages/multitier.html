@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multitier Architecture — Internet Terminology</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav id="sidebar"></nav>
+  <main>
+    <div class="hero">
+      <div class="term-number">Term 10 of 16</div>
+      <h1>Multitier Architecture</h1>
+      <p class="tagline">A software design pattern that separates an application into distinct layers — presentation, logic, and data — for scalability, maintainability, and security.</p>
+    </div>
+    <article>
+      <h2>Definition</h2>
+      <p><strong>Multitier architecture</strong> (also called <em>n-tier architecture</em>) is a client–server software architecture model in which the functions of an application are separated into distinct tiers or layers. Each tier is responsible for a specific role and communicates with adjacent tiers through well-defined interfaces. The most common implementation is the <strong>three-tier architecture</strong>.</p>
+      <p>Separating concerns across tiers allows each layer to be developed, maintained, scaled, and secured independently, resulting in more robust and flexible web applications.</p>
+
+      <figure class="img-block">
+        <img src="../images/multitier.svg" alt="Three-tier architecture diagram showing presentation, logic, and data layers" />
+        <figcaption>The classic three-tier model: Presentation → Application Logic → Data Storage, each layer separated for clarity and scalability.</figcaption>
+      </figure>
+
+      <h2>The Three-Tier Model</h2>
+      <p>The three-tier architecture is the most widely used model in web application development:</p>
+      <ul>
+        <li><strong>Tier 1 — Presentation Layer (Client)</strong>: The user interface — what users see and interact with. In web applications, this is the browser rendering HTML, CSS, and JavaScript. It sends user input to the application layer and displays responses.</li>
+        <li><strong>Tier 2 — Application Layer (Logic/Business)</strong>: The "brain" of the application. This layer processes requests from the presentation tier, applies business rules, performs calculations, and coordinates data retrieval. Examples: Node.js, Django, Laravel, Spring Boot servers.</li>
+        <li><strong>Tier 3 — Data Layer (Database)</strong>: Stores, retrieves, and manages application data. This layer includes relational databases (MySQL, PostgreSQL) or NoSQL stores (MongoDB, Redis). It only receives requests from the application layer, never directly from users.</li>
+      </ul>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">Common Model</div>
+          <div class="card-value">Three-tier (3-tier)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Tier 1</div>
+          <div class="card-value">Presentation (Client/UI)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Tier 2</div>
+          <div class="card-value">Application Logic</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Tier 3</div>
+          <div class="card-value">Data (Database)</div>
+        </div>
+      </div>
+
+      <h2>Two-Tier vs Three-Tier vs N-Tier</h2>
+      <p>A <strong>two-tier architecture</strong> (client–server) has the client communicating directly with a database. This is simpler but less scalable and less secure. <strong>Three-tier</strong> adds an application server in between, significantly improving security and scalability. <strong>N-tier</strong> further separates services into microservices, API gateways, caching layers, CDNs, and more — as seen in modern cloud-native applications.</p>
+
+      <div class="highlight">
+        The three-tier model ensures that the database is never directly exposed to the client, dramatically reducing the risk of SQL injection and other data-layer attacks.
+      </div>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li><strong>Scalability</strong> — Each tier can be scaled independently based on load.</li>
+        <li><strong>Maintainability</strong> — Changes to one tier rarely affect others.</li>
+        <li><strong>Security</strong> — The data layer is insulated from direct client access.</li>
+        <li><strong>Reusability</strong> — The application layer can serve multiple presentation clients (web, mobile, API).</li>
+        <li><strong>Testability</strong> — Each tier can be tested in isolation.</li>
+      </ul>
+    </article>
+    <div class="page-nav">
+      <a href="../index.html">← All Terms</a>
+      <a href="extranet.html">← Extranet</a>
+      <a href="ftp.html">Next: FTP →</a>
+      <a href="web-servers.html">Web Servers</a>
+      <a href="html.html">HTML</a>
+    </div>
+  </main>
+  <script src="../nav.js"></script>
+  <script>buildNav('multitier');</script>
+</body>
+</html>
