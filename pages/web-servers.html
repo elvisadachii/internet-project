@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Servers — Internet Terminology</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav id="sidebar"></nav>
+  <main>
+    <div class="hero">
+      <div class="term-number">Term 04 of 16</div>
+      <h1>Web Servers</h1>
+      <p class="tagline">Hardware and software systems that store web content and respond to HTTP requests from clients around the world.</p>
+    </div>
+    <article>
+      <h2>Definition</h2>
+      <p>A <strong>web server</strong> is a computer system — both the physical hardware and the software running on it — that stores, processes, and delivers web content to clients over the Internet or an intranet. When a web browser sends an HTTP request for a web page, the web server receives that request, locates the appropriate files, and returns them in an HTTP response.</p>
+      <p>The term "web server" can refer to both the <em>hardware</em> (a powerful computer in a data centre) and the <em>software</em> (the programme that listens for and handles HTTP requests, such as Apache or Nginx).</p>
+
+      <figure class="img-block">
+        <img src="../images/webservers.svg" alt="Server racks in a modern data centre" />
+        <figcaption>Modern data centres house thousands of web servers that power websites and applications globally.</figcaption>
+      </figure>
+
+      <h2>How a Web Server Works</h2>
+      <ol>
+        <li>A browser sends an <strong>HTTP/HTTPS request</strong> to the server's IP address on port 80 (HTTP) or 443 (HTTPS).</li>
+        <li>The web server software <strong>receives and parses</strong> the request.</li>
+        <li>For <strong>static content</strong> (HTML, images, CSS), the server reads files from disk and returns them directly.</li>
+        <li>For <strong>dynamic content</strong>, the server passes the request to an application server (PHP, Python, Node.js, etc.) which generates content on the fly.</li>
+        <li>The response is sent back to the browser with a <strong>status code</strong> (200 OK, 404 Not Found, etc.).</li>
+      </ol>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">Most Popular</div>
+          <div class="card-value">Nginx (~34%), Apache (~30%)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Default HTTP Port</div>
+          <div class="card-value">80 (HTTP) / 443 (HTTPS)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Cloud Providers</div>
+          <div class="card-value">AWS, Azure, Google Cloud</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Invented</div>
+          <div class="card-value">1990 — Tim Berners-Lee</div>
+        </div>
+      </div>
+
+      <h2>Static vs Dynamic Servers</h2>
+      <p>A <strong>static web server</strong> stores fixed files and serves them as-is. A <strong>dynamic web server</strong> consists of a web server plus extra software (typically an application server and a database) that generates customised content per request. For example, when you log into social media, a dynamic server retrieves your specific data from a database to compose a personalised page.</p>
+
+      <h2>Popular Web Server Software</h2>
+      <ul>
+        <li><strong>Apache HTTP Server</strong> — Open-source, highly configurable, used since 1995.</li>
+        <li><strong>Nginx</strong> — High-performance, event-driven, excels at handling many concurrent connections.</li>
+        <li><strong>Microsoft IIS</strong> — Windows-based, integrates with the .NET ecosystem.</li>
+        <li><strong>LiteSpeed</strong> — Commercial server known for speed and WordPress compatibility.</li>
+        <li><strong>Caddy</strong> — Modern server with automatic HTTPS via Let's Encrypt.</li>
+      </ul>
+
+      <div class="highlight">
+        The world's first web server was Tim Berners-Lee's NeXT computer at CERN, bearing the label: "This machine is a server. DO NOT POWER IT DOWN!!"
+      </div>
+    </article>
+    <div class="page-nav">
+      <a href="../index.html">← All Terms</a>
+      <a href="web-browsers.html">← Web Browsers</a>
+      <a href="url.html">Next: URLs →</a>
+      <a href="http.html">HTTP</a>
+      <a href="multitier.html">Multitier Architecture</a>
+    </div>
+  </main>
+  <script src="../nav.js"></script>
+  <script>buildNav('web-servers');</script>
+</body>
+</html>
