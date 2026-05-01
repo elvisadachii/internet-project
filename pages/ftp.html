@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FTP — Internet Terminology</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav id="sidebar"></nav>
+  <main>
+    <div class="hero">
+      <div class="term-number">Term 11 of 16</div>
+      <h1>File Transfer Protocol</h1>
+      <p class="tagline">A standard network protocol used to transfer files between a client and server over a TCP/IP network — one of the oldest Internet protocols still in use.</p>
+    </div>
+    <article>
+      <h2>Definition</h2>
+      <p><strong>File Transfer Protocol (FTP)</strong> is a standard communication protocol used to transfer computer files between a client and a server on a computer network. FTP is built on a client–server model architecture using separate control and data connections between the client and the server.</p>
+      <p>Developed in the early 1970s — predating the World Wide Web — FTP remains in use today for web server file management, software distribution, and large file transfers, though it has largely been superseded by more secure alternatives like SFTP and HTTPS.</p>
+
+      <figure class="img-block">
+        <img src="../images/ftp.svg" alt="FTP client software interface showing file transfer between local and remote directories" />
+        <figcaption>An FTP client showing local (left) and remote server (right) directories, enabling drag-and-drop file transfers.</figcaption>
+      </figure>
+
+      <h2>How FTP Works</h2>
+      <p>FTP uses <strong>two separate TCP connections</strong>:</p>
+      <ol>
+        <li><strong>Control Connection (Port 21)</strong> — Used for sending commands (e.g., login, list directories, change directory) and receiving server responses. This connection remains open for the entire session.</li>
+        <li><strong>Data Connection (Port 20 or dynamic)</strong> — Used for the actual transfer of file data. A new data connection is created for each file transfer or directory listing.</li>
+      </ol>
+      <p>FTP operates in two modes: <strong>Active Mode</strong> (server initiates data connection back to the client) and <strong>Passive Mode</strong> (client initiates both connections — preferred for firewall compatibility).</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">Invented</div>
+          <div class="card-value">1971 (Abhay Bhushan)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Control Port</div>
+          <div class="card-value">21 (TCP)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Data Port</div>
+          <div class="card-value">20 (Active mode)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Encryption</div>
+          <div class="card-value">None (plain text)</div>
+        </div>
+      </div>
+
+      <h2>FTP Variants</h2>
+      <ul>
+        <li><strong>FTP</strong> — Original, unencrypted. Credentials and data sent in plain text. Not recommended over public networks.</li>
+        <li><strong>FTPS (FTP Secure)</strong> — Adds SSL/TLS encryption to FTP. Two variants: Explicit FTPS (starts unencrypted, upgrades) and Implicit FTPS (always encrypted).</li>
+        <li><strong>SFTP (SSH File Transfer Protocol)</strong> — Not technically FTP, but transfers files over SSH. Fully encrypted and widely preferred for security.</li>
+        <li><strong>TFTP (Trivial File Transfer Protocol)</strong> — Simplified FTP using UDP, used for bootstrapping and firmware updates on embedded devices.</li>
+      </ul>
+
+      <div class="highlight">
+        FTP predates the Internet as we know it — the original RFC 114 specification was published in 1971, and FTP remains one of the oldest Internet protocols still actively used today.
+      </div>
+
+      <h2>Common FTP Clients</h2>
+      <p>Popular FTP client applications include <strong>FileZilla</strong> (open-source, cross-platform), <strong>WinSCP</strong> (Windows, supports SFTP), <strong>Cyberduck</strong> (Mac/Windows), and command-line tools like the built-in <code>ftp</code> command in Linux/macOS. Many web hosting control panels (cPanel, Plesk) also include integrated FTP file managers.</p>
+    </article>
+    <div class="page-nav">
+      <a href="../index.html">← All Terms</a>
+      <a href="multitier.html">← Multitier Architecture</a>
+      <a href="html.html">Next: HTML →</a>
+      <a href="tcp-ip.html">TCP/IP</a>
+      <a href="http.html">HTTP</a>
+    </div>
+  </main>
+  <script src="../nav.js"></script>
+  <script>buildNav('ftp');</script>
+</body>
+</html>
