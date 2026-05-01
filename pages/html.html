@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML — Internet Terminology</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav id="sidebar"></nav>
+  <main>
+    <div class="hero">
+      <div class="term-number">Term 12 of 16</div>
+      <h1>Hypertext Markup Language</h1>
+      <p class="tagline">The standard markup language for creating web pages — the foundational building block of every document on the World Wide Web.</p>
+    </div>
+    <article>
+      <h2>Definition</h2>
+      <p><strong>HTML (Hypertext Markup Language)</strong> is the standard language used to create and structure content on the web. HTML describes the structure of a web page semantically and originally included cues for the document's appearance. Web browsers receive HTML documents from a server and render them into visible or audible web pages.</p>
+      <p>HTML uses a system of <strong>elements</strong> represented by <strong>tags</strong> (e.g., <code>&lt;p&gt;</code> for paragraphs, <code>&lt;h1&gt;</code> for headings) to annotate text. Browsers interpret these tags to display content correctly. HTML works in conjunction with <strong>CSS</strong> (for styling) and <strong>JavaScript</strong> (for interactivity) to form the complete web technology stack.</p>
+
+      <figure class="img-block">
+        <img src="../images/html.svg" alt="HTML code displayed in a code editor showing tags and structure" />
+        <figcaption>HTML code showing the nested structure of elements — tags, attributes, and content that form the skeleton of a web page.</figcaption>
+      </figure>
+
+      <h2>Basic HTML Structure</h2>
+      <p>Every HTML document follows a standard structure:</p>
+      <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code> — Declares the document as HTML5.</li>
+        <li><code>&lt;html&gt;</code> — The root element wrapping the entire document.</li>
+        <li><code>&lt;head&gt;</code> — Contains metadata: page title, charset, CSS links, scripts.</li>
+        <li><code>&lt;body&gt;</code> — Contains all visible page content.</li>
+      </ul>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">Created by</div>
+          <div class="card-value">Tim Berners-Lee, 1991</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Current Version</div>
+          <div class="card-value">HTML5 (2014, living standard)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Maintained by</div>
+          <div class="card-value">WHATWG &amp; W3C</div>
+        </div>
+        <div class="card">
+          <div class="card-label">File Extension</div>
+          <div class="card-value">.html / .htm</div>
+        </div>
+      </div>
+
+      <h2>Key HTML Concepts</h2>
+      <ul>
+        <li><strong>Elements</strong> — The building blocks of HTML, defined by a start tag, content, and end tag: <code>&lt;p&gt;text&lt;/p&gt;</code>.</li>
+        <li><strong>Attributes</strong> — Provide additional information about elements: <code>&lt;img src="photo.jpg" alt="Description"&gt;</code>.</li>
+        <li><strong>Hyperlinks</strong> — Created with the <code>&lt;a href="..."&gt;</code> element — the "HT" in HTML, enabling the web's interlinked nature.</li>
+        <li><strong>Semantic HTML</strong> — Using meaningful tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code> to convey document structure to browsers and assistive technologies.</li>
+        <li><strong>Forms</strong> — <code>&lt;form&gt;</code> elements allow user input collection for logins, search, and data submission.</li>
+        <li><strong>Media</strong> — <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code> elements embed rich media.</li>
+      </ul>
+
+      <div class="highlight">
+        HTML is not a programming language — it is a <em>markup language</em>. It defines structure and meaning, not instructions or logic. JavaScript handles programming logic; CSS handles visual presentation.
+      </div>
+
+      <h2>HTML Versions</h2>
+      <p>HTML has evolved from <strong>HTML 1.0</strong> (1991) through several major versions. <strong>HTML 4.01</strong> (1999) and <strong>XHTML</strong> (2000) formalised standards. <strong>HTML5</strong> (2014) was a landmark update, introducing native audio, video, canvas, semantic elements, form improvements, and APIs for geolocation, local storage, and offline capabilities — transforming HTML from a document format into a full application platform.</p>
+    </article>
+    <div class="page-nav">
+      <a href="../index.html">← All Terms</a>
+      <a href="ftp.html">← FTP</a>
+      <a href="web1.html">Next: Web 1.0 →</a>
+      <a href="www.html">World Wide Web</a>
+      <a href="web-browsers.html">Web Browsers</a>
+    </div>
+  </main>
+  <script src="../nav.js"></script>
+  <script>buildNav('html');</script>
+</body>
+</html>
