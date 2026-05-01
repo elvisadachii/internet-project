@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TCP/IP — Internet Terminology</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav id="sidebar"></nav>
+  <main>
+    <div class="hero">
+      <div class="term-number">Term 02 of 16</div>
+      <h1>Transmission Control Protocol / Internet Protocol</h1>
+      <p class="tagline">The foundational suite of communication protocols that defines how data is transmitted across the Internet.</p>
+    </div>
+    <article>
+      <h2>Definition</h2>
+      <p><strong>TCP/IP</strong> (Transmission Control Protocol / Internet Protocol) is the core set of communication rules and standards that govern how data is packaged, addressed, transmitted, routed, and received across networked computers. Often called the "language of the Internet," TCP/IP is the reason a device in Nairobi can seamlessly communicate with a server in California.</p>
+      <p>TCP/IP is not a single protocol but a <strong>suite of protocols</strong> — a conceptual framework consisting of four abstraction layers, each responsible for a specific aspect of network communication.</p>
+
+      <figure class="img-block">
+        <img src="../images/tcpip.svg" alt="Diagram of TCP/IP protocol layers showing data flow" />
+        <figcaption>The TCP/IP model organises network communication into four distinct layers, each handling specific functions.</figcaption>
+      </figure>
+
+      <h2>The Two Core Protocols</h2>
+      <p><strong>Internet Protocol (IP)</strong> is responsible for addressing and routing. Every device on the Internet is assigned an IP address (e.g., 192.168.1.1 for IPv4, or a longer hexadecimal address for IPv6). IP breaks data into <em>packets</em> and routes each packet independently through the network toward the destination.</p>
+      <p><strong>Transmission Control Protocol (TCP)</strong> operates on top of IP and ensures <em>reliable</em>, ordered, and error-checked delivery. TCP establishes a connection via a "three-way handshake" (SYN → SYN-ACK → ACK), transmits data in segments, and guarantees that all segments arrive correctly and in order.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">Developed by</div>
+          <div class="card-value">Vint Cerf &amp; Bob Kahn</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Published</div>
+          <div class="card-value">1974 (RFC 675)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Current IP</div>
+          <div class="card-value">IPv4 &amp; IPv6</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Model Layers</div>
+          <div class="card-value">4 (Application, Transport, Internet, Link)</div>
+        </div>
+      </div>
+
+      <h2>The Four Layers</h2>
+      <ul>
+        <li><strong>Application Layer</strong> — Handles high-level protocols such as HTTP, FTP, DNS, and SMTP. This is where user-facing software operates.</li>
+        <li><strong>Transport Layer</strong> — TCP and UDP operate here. This layer manages end-to-end communication, error detection, and data ordering.</li>
+        <li><strong>Internet Layer</strong> — IP operates here, handling logical addressing and routing of packets across multiple networks.</li>
+        <li><strong>Network Access Layer</strong> — Deals with physical hardware, MAC addresses, and the transmission of raw data over physical media (Ethernet, Wi-Fi).</li>
+      </ul>
+
+      <h2>TCP vs UDP</h2>
+      <p>While TCP guarantees reliable delivery, <strong>UDP (User Datagram Protocol)</strong> trades reliability for speed. UDP is used in applications where some packet loss is acceptable — such as live video streaming, online gaming, and VoIP calls — because low latency matters more than perfect delivery.</p>
+
+      <div class="highlight">
+        TCP/IP was adopted as the standard protocol of ARPANET in 1983, marking the birth of the modern Internet.
+      </div>
+
+      <h2>IPv4 vs IPv6</h2>
+      <p>IPv4 uses 32-bit addresses, supporting approximately 4.3 billion unique addresses. As the Internet grew, this proved insufficient. <strong>IPv6</strong> uses 128-bit addresses, providing an astronomically large address space (approximately 3.4 × 10³⁸ addresses) to support the ongoing growth of connected devices worldwide.</p>
+    </article>
+    <div class="page-nav">
+      <a href="../index.html">← All Terms</a>
+      <a href="www.html">← World Wide Web</a>
+      <a href="web-browsers.html">Next: Web Browsers →</a>
+      <a href="http.html">HTTP</a>
+      <a href="dns.html">DNS</a>
+    </div>
+  </main>
+  <script src="../nav.js"></script>
+  <script>buildNav('tcp-ip');</script>
+</body>
+</html>
