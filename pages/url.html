@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URLs — Internet Terminology</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav id="sidebar"></nav>
+  <main>
+    <div class="hero">
+      <div class="term-number">Term 05 of 16</div>
+      <h1>Uniform Resource Locators</h1>
+      <p class="tagline">The standardised addressing system that uniquely identifies every resource — page, image, video, or file — on the World Wide Web.</p>
+    </div>
+    <article>
+      <h2>Definition</h2>
+      <p>A <strong>Uniform Resource Locator (URL)</strong> is a reference (address) to a resource on the Internet. It specifies the location of a resource on a computer network and the mechanism for retrieving it. Every web page, image, video, and file accessible on the Internet has a unique URL.</p>
+      <p>URLs are a subset of <strong>URIs (Uniform Resource Identifiers)</strong>, a broader standard. Tim Berners-Lee introduced URLs as part of his original web design to give every resource a unique, navigable address.</p>
+
+      <figure class="img-block">
+        <img src="../images/url.svg" alt="Anatomy of a URL shown in a browser address bar" />
+        <figcaption>A URL displayed in a browser's address bar, showing its scheme, domain, path, and query components.</figcaption>
+      </figure>
+
+      <h2>Anatomy of a URL</h2>
+      <p>A complete URL has several distinct components:</p>
+      <ul>
+        <li><strong>Scheme/Protocol</strong> — Specifies how the resource is accessed: <code>https://</code>, <code>http://</code>, <code>ftp://</code>, <code>mailto:</code></li>
+        <li><strong>Subdomain</strong> — An optional prefix, commonly <code>www</code>, that identifies a specific section of a site.</li>
+        <li><strong>Domain Name</strong> — The human-readable name of the server, e.g., <code>example.com</code>.</li>
+        <li><strong>Top-Level Domain (TLD)</strong> — The extension: <code>.com</code>, <code>.org</code>, <code>.ke</code>, <code>.edu</code>.</li>
+        <li><strong>Port</strong> — Optional, e.g., <code>:8080</code>. Defaults to 80 for HTTP, 443 for HTTPS.</li>
+        <li><strong>Path</strong> — Points to a specific resource on the server, e.g., <code>/blog/article</code>.</li>
+        <li><strong>Query String</strong> — Optional parameters after <code>?</code>, e.g., <code>?page=2&amp;sort=date</code>.</li>
+        <li><strong>Fragment</strong> — A <code>#anchor</code> link to a specific section within the page.</li>
+      </ul>
+
+      <div class="highlight">
+        Example: <strong>https://www.example.co.ke/products?category=tech#reviews</strong><br>
+        Scheme: https | Subdomain: www | Domain: example.co.ke | Path: /products | Query: category=tech | Fragment: #reviews
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">Introduced by</div>
+          <div class="card-value">Tim Berners-Lee, 1994</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Standard Body</div>
+          <div class="card-value">IETF (RFC 3986)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Max Length</div>
+          <div class="card-value">2,048 characters (IE limit)</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Secure Scheme</div>
+          <div class="card-value">HTTPS (encrypted)</div>
+        </div>
+      </div>
+
+      <h2>URL vs URI vs URN</h2>
+      <p>A <strong>URI</strong> (Uniform Resource Identifier) is the broadest term — it identifies a resource. A <strong>URL</strong> identifies a resource by its location and access method. A <strong>URN</strong> (Uniform Resource Name) identifies a resource by name, independent of location (e.g., ISBN numbers for books). All URLs are URIs, but not all URIs are URLs.</p>
+
+      <h2>URL Encoding</h2>
+      <p>URLs can only contain certain characters. Special characters and spaces are encoded using <strong>percent-encoding</strong> (e.g., a space becomes <code>%20</code>, &amp; becomes <code>%26</code>). This ensures URLs are transmitted correctly across all systems.</p>
+    </article>
+    <div class="page-nav">
+      <a href="../index.html">← All Terms</a>
+      <a href="web-servers.html">← Web Servers</a>
+      <a href="dns.html">Next: DNS →</a>
+      <a href="http.html">HTTP</a>
+      <a href="www.html">World Wide Web</a>
+    </div>
+  </main>
+  <script src="../nav.js"></script>
+  <script>buildNav('url');</script>
+</body>
+</html>
